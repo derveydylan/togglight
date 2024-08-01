@@ -1,0 +1,11 @@
+<div class="settings">
+    <app-title [title]="'Settings'" />
+    
+    <h2>Game progress</h2>
+    
+    <p>This app uses localStorage to save your game progression. You can reset game progression at any time.</p>
+    
+    <a class="btn btn-primary btn-delete" (click)="onResetGameProgress()">Reset game progress</a>
+    
+    <app-dialog [dialogData]="resetGameProgressDialog" />
+</div>

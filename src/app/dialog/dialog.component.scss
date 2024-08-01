@@ -1,0 +1,65 @@
+.dialog
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--gray-filter);
+    z-index: 1;
+
+    .dialog-close
+    {
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        color: var(--anti-flash-white);
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        top: -6px;
+        right: -6px;
+    }
+
+    .dialog-content
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 30%;
+        max-width: 50%;
+        height: max-content;
+        padding: 15px;
+        background-color: var(--night);
+        border-radius: 5px;
+        padding-bottom: 30px;
+
+        p
+        {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+    }
+
+    .btn-container
+    {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 90%;
+        margin-top: 10px;
+
+        *
+        {
+            min-width: max-content;
+            max-width: 33%;
+            flex: 1;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@if(dialogData.isOpen)
+{
+    <div class="dialog" (click)="onCloseDialog()">
+        <div class="dialog-content" (click)="$event.stopPropagation()">
+            <div class="dialog-close" (click)="onCloseDialog()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            @if(dialogData.title !== '')
+            {
+                <app-title [title]="dialogData.title" />
+            }
+            
+            @if(dialogData.text !== '')
+            {
+                <p>{{ dialogData.text }}</p>
+            }
+            
+            @if(dialogData.options !== [])
+            {
+                <div class="btn-container">
+                    @if(dialogData.type === 'action-confirm' || dialogData.type === 'delete-confirm')
+                    {
+                        <a class="btn btn-secondary" (click)="onCloseDialog()">Cancel</a>
+                    }
+
+                    @for(option of dialogData.options; track option.name)
+                    {
+                        <a [routerLink]="option.url" class="btn btn-primary" [ngClass]="{'btn-delete': dialogData.type === 'delete-confirm'}" (click)="onCloseDialog()">{{ option.name }}</a>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+}

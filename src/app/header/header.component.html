@@ -1,0 +1,19 @@
+<header>
+    <p id="logo">Togglight</p>
+
+    @if(isMenuOpen)
+    {
+        <div class="mobile-menu-background" (click)="onCloseMenu()"></div>
+    }
+
+    <nav [ngClass]="{'active': isMenuOpen}">
+        <a routerLink="levels" (click)="onCloseMenu()">Levels</a>
+        <a routerLink="how-to" (click)="onCloseMenu()">How to</a>
+        <a routerLink="settings" (click)="onCloseMenu()">Settings</a>
+        <a routerLink="credits" (click)="onCloseMenu()">Credits</a>
+    </nav>
+
+    <div class="menu" (click)="onOpenMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</header>

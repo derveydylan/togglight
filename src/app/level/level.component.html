@@ -1,0 +1,42 @@
+<div class="game-display">
+    <app-title [title]="level.name" />
+    
+    <a routerLink="/levels" class="btn btn-secondary">Back to levels</a>
+    
+    <div class="level">
+        @if(isPuzzleResolved)
+        {
+            <p class="completed-text">Level Completed !</p>
+        }
+        <div [ngClass]="{'completed-filter': isPuzzleResolved}" class="grid">
+            @for(row of level.grid; track row)
+            {
+                <div class="grid-row">
+                    @for(cell of row; track cell)
+                    {
+                        <div class="grid-cell">
+                            @switch(cell.state)
+                            {
+                                @case(null)
+                                {
+                                    <div class="light light-none"></div>
+                                }
+                
+                                @case(false)
+                                {
+                                    <div class="light light-off" (click)="onLightClick(cell.x, cell.y)"></div>
+                                }
+                
+                                @case(true)
+                                {
+                                    <div class="light light-on" (click)="onLightClick(cell.x, cell.y)"></div>
+                                }
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

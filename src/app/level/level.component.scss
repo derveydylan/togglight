@@ -1,0 +1,98 @@
+a
+{
+    margin-bottom: 20px;
+}
+
+.level
+{
+    position: relative;
+
+    .grid
+    {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--gray);
+        border-radius: 10px;
+        padding: 10px;
+
+        .grid-row
+        {
+            display: flex;
+            flex-direction: row;
+            background-color: var(--eerie-black);
+            
+            .grid-cell
+            {
+                width: 50px;
+                height: 50px;
+                padding: 12px;
+
+                .light
+                {
+                    min-width: 100%;
+                    min-height: 100%;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                .light-none
+                {
+                    cursor: default;
+                }
+
+                .light-off
+                {
+                    background-color: var(--night);
+                }
+
+                .light-on
+                {
+                    background-color: var(--anti-flash-white);
+                }
+            }
+        }
+    }
+
+    .completed-filter
+    {
+        background-color: var(--gray-filter);
+        pointer-events: none;
+    }
+
+    .completed-text
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1440px) or (max-height: 850px)
+{
+    .grid-cell
+    {
+        width: 35px !important;
+        height: 35px !important;
+        padding: 8px !important;
+    }
+
+    .level .completed-text
+    {
+        position: relative;
+    }
+}
+
+@media (max-width: 767px) or (max-height: 767px)
+{
+    .grid-cell
+    {
+        width: 20px !important;
+        height: 20px !important;
+        padding: 4px !important;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="home">
+    <div class="logo">
+        <img src="assets/logo/Logo_black_bg.svg" alt="Togglight logo">
+    </div>
+    
+    <p>Puzzle Game</p>
+    
+    <nav>
+        <a class="btn btn-primary" (click)="onPlay()">Play</a>
+        <a class="btn btn-secondary" routerLink="how-to">How to</a>
+    </nav>
+
+    <app-dialog [dialogData]="gamemodeDialog"/>
+
+</div>

@@ -1,0 +1,70 @@
+.levels-list
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: 70vh;
+
+    .level
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        margin: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: var(--eerie-black);
+        transition: 0.25s ease;
+        color: var(--anti-flash-white);
+        text-decoration: none;
+
+        .level-icon
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: var(--night);
+            user-select: none;
+            position: relative;
+
+            // Circle check icon, for completed levels
+            i
+            {
+                position: absolute;
+                scale: 2;
+                color: var(--sgbus-green);
+            }
+        }
+
+        // Level name
+        strong
+        {
+            padding: 8px 0;
+        }
+
+        // Level difficulty, represented with stars
+        em
+        {
+            color: var(--timberwolf);
+        }
+
+        &:hover, &:focus
+        {
+            background-color: var(--jet);
+        }
+
+        &:has(.fa-circle-check)
+        {
+            opacity: 0.33;
+            pointer-events: none;
+        }
+    }
+}

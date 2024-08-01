@@ -1,0 +1,57 @@
+.home
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    .logo 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    
+        img 
+        {
+            width: 350px;
+        }
+    }
+    
+    p 
+    {
+        font-size: 40px;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    nav 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    
+        a 
+        {
+            width: 100px;
+            margin: 8px;
+            padding: 8px;
+            text-align: center;
+
+            &:first-child
+            {
+                scale: 1.15;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px)
+{
+    img
+    {
+        width: 275px !important;
+    }
+}
