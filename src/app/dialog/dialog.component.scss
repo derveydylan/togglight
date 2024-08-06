@@ -10,6 +10,7 @@
     left: 0;
     background-color: var(--gray-filter);
     z-index: 1;
+    text-align: center;
 
     .dialog-close
     {
@@ -41,7 +42,7 @@
         p
         {
             width: 100%;
-            padding: 20px;
+            padding: 20px 20px 0 20px;
             text-align: center;
         }
     }

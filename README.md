@@ -1,7 +1,16 @@
 # Togglight
 
-**Togglight** is a simple puzzle game where you toggle lights that are on a grid between off and on states.
+**Togglight** is a lights out puzzle game where you toggle lights between off and on states.
+Unlike other games, the grid you play on can contain cells without lights.
 
-# Play
+# Play the game
 
-Play the game [right now](https://github.com/DydyCraft-21/Togglight) (not the correct link yet).
+The game will be soon playable via its own website.
+
+# Setup local env
+
+You'll need to install NodeJS and Angular. Once done, follow these steps.
+
+1. Clone the project.
+2. On root, execute ``ng serve``.
+3. Go to http://localhost:4200/

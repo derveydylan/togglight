@@ -34,8 +34,8 @@ export class DialogService
         easterEgg: new Dialog
         (
             'action-confirm',
-            'おもろいだ、あれ。',
-            '',
+            'Easter Egg Found !',
+            'As one man said, an app without a konami code isn\'t a real app.',
             []
         ),
     }
