@@ -63,12 +63,23 @@ body
 {
     font-family: 'Lobster';
     color: var(--white);
+    font-size: 100px;
+    user-select: none;
+    margin: 5px 0 0 0;
+}
+
+header #logo
+{
     font-size: 38px;
     width: 150px;
     height: 60px;
-    user-select: none;
-    margin: 5px 0 0 0;
-    align-self: center;
+}
+
+header a:has(#logo)
+{
+    width: max-content;
+    box-shadow: none;
+    color: var(--white);
 }
 
 // --------------------------------------------------------------------------------

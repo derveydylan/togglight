@@ -11,14 +11,9 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 40px;
-    
-        img 
-        {
-            width: 350px;
-        }
     }
     
-    p 
+    .home-subtitle
     {
         font-size: 40px;
         font-style: italic;
@@ -50,8 +45,8 @@
 
 @media (max-width: 600px)
 {
-    img
+    #logo
     {
-        width: 275px !important;
+        font-size: 75px !important;
     }
 }
