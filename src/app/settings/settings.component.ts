@@ -31,9 +31,9 @@ export class SettingsComponent implements OnInit
     {
         this.resetGameProgressDialog = this.dialogService.getDialog('resetGameProgress');
 
-        this.activatedRoute.params.subscribe((params) => 
+        this.activatedRoute.params.subscribe((params) =>
         {
-            switch(params['action']) 
+            switch(params['action'])
             {
                 case 'reset-game-progress':
                     this.levelService.resetLevels();
@@ -45,11 +45,8 @@ export class SettingsComponent implements OnInit
                         // Reload the page in order to apply the reset
                         window.location.reload();
                     }, 1);
-                    
+
                     break;
-                
-                default:
-                    // Do nothing
             }
         });
     }

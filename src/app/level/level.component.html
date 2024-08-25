@@ -1,8 +1,8 @@
 <div class="game-display">
     <app-title [title]="level.name" />
-    
+
     <a routerLink="/levels" class="btn btn-secondary">Back to levels</a>
-    
+
     <div class="level">
         @if(isPuzzleResolved)
         {
@@ -21,12 +21,12 @@
                                 {
                                     <div class="light light-none"></div>
                                 }
-                
+
                                 @case(false)
                                 {
                                     <div class="light light-off" (click)="onLightClick(cell.x, cell.y)"></div>
                                 }
-                
+
                                 @case(true)
                                 {
                                     <div class="light light-on" (click)="onLightClick(cell.x, cell.y)"></div>

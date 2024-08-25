@@ -1090,7 +1090,7 @@ export class LevelService
                     new Light(7, 7, false)
                 ]
             ]
-            
+
         ),
 
         new Level(
@@ -1235,7 +1235,7 @@ export class LevelService
     saveLevels(level?: Level): void
     {
         let levels = this.getLevels()
-        
+
         if(level)
         {
             const id = levels.findIndex(l => l.id === level.id);
@@ -1251,7 +1251,7 @@ export class LevelService
         localStorage.removeItem('basicLevels');
     }
 
-    createLevelFromObject(obj: any): Level 
+    createLevelFromObject(obj: any): Level
     {
         return {
             id: obj.id,

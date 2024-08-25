@@ -27,7 +27,7 @@ export class LightService
 
     getNeighoringLights(level: Level, light: Light): Light[]
     {
-        const neighoringLights = 
+        const neighoringLights =
         [
             this.getLight(level, light.x, light.y - 1), // Top light
             this.getLight(level, light.x - 1, light.y), // Left light

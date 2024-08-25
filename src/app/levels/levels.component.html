@@ -1,21 +1,21 @@
 <div class="game-display">
     <app-title [title]="'Levels'" />
-    
+
     <div class="levels-list">
         @for(level of levels; track level.id)
         {
         <a [routerLink]="['/level', level.id]" class="level">
             <div class="level-icon">
                     {{ level.id }}
-    
+
                 @if(level.completed)
                 {
                 <i class="fa-regular fa-circle-check"></i>
                 }
             </div>
-    
+
             <strong>{{ level.name }}</strong>
-    
+
             <em>
                 @for(_ of countStars(level.difficulty); track _)
                 {

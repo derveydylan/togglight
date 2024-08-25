@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
 @Component({
     selector: 'app-page-not-found',
     standalone: true,
-    imports: 
+    imports:
     [
         TitleComponent,
         RouterLink
