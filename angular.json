@@ -25,6 +25,12 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "optimization": {
+            "styles": {
+                "minify": true,
+                "inlineCritical": false
+              }
+            },
             "assets": [
               {
                 "glob": "**/*",
