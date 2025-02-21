@@ -24,10 +24,15 @@ jobs:
       - name: Build Angular project
         run: npx ng build --base-href "/"
 
+      - name: Add CNAME file
+        run: |
+          mkdir -p dist/togglight
+          echo "togglight.derveydylan.github.io" > dist/togglight/CNAME
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/togglight/browser
+          path: dist/togglight
 
   deploy:
     permissions:
@@ -44,9 +49,6 @@ jobs:
     needs: build
 
     steps:
-      - name: Add CNAME file
-        run: echo "togglight.derveydylan.github.io" > dist/togglight/CNAME
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
