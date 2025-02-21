@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Angular project
-        run: npx ng build --base-href "/" --no-extract-css
+        run: npx ng build --base-href "/" --inline-style-language=none
 
       - name: Add CNAME file
         run: |
