@@ -45,7 +45,7 @@ jobs:
 
     steps:
       - name: Add CNAME file
-        run: echo "togglight.derveydylan.github.io" > dist/togglight/browser/CNAME
+        run: echo "togglight.derveydylan.github.io" > dist/togglight/CNAME
 
       - name: Deploy to GitHub Pages
         id: deployment
