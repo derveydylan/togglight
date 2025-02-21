@@ -26,13 +26,13 @@ jobs:
 
       - name: Add CNAME file
         run: |
-          mkdir -p dist/togglight
-          echo "togglight.derveydylan.github.io" > dist/togglight/CNAME
+          mkdir -p dist/togglight/browser
+          echo "togglight.derveydylan.github.io" > dist/togglight/browser/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/togglight
+          path: dist/togglight/browser
 
   deploy:
     permissions:
