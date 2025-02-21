@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Level } from "../models/level";
 import { Light } from "../models/light";
-import { LightState } from "../models/light-state.type";
+import { LightState } from "../types/light-state.type";
 
 @Injectable(
 {

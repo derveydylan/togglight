@@ -1,4 +1,4 @@
-import { DialogType } from "./dialog-type.type";
+import { DialogType } from "../types/dialog-type.type";
 
 export interface DialogOptions
 {

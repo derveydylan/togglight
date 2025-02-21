@@ -1,4 +1,4 @@
-import { Difficulty } from "./difficulty.type";
+import { Difficulty } from "../types/difficulty.type";
 import { Light } from "./light";
 
 export class Level

@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TitleComponent } from '../title/title.component';
 import { RouterLink } from '@angular/router';
-import { Dialog } from '../models/dialog';
-import { DialogService } from '../services/dialog.service';
+import { Dialog } from '../../models/dialog';
+import { DialogService } from '../../services/dialog.service';
 import { NgClass } from '@angular/common';
 
 @Component({

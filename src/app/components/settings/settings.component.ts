@@ -1,10 +1,10 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { TitleComponent } from '../title/title.component';
-import { Dialog } from '../models/dialog';
+import { Dialog } from '../../models/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LevelService } from '../services/level.service';
+import { LevelService } from '../../services/level.service';
 import { DialogComponent } from "../dialog/dialog.component";
-import { DialogService } from '../services/dialog.service';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
     selector: 'app-settings',

@@ -1,4 +1,4 @@
-import { LightState } from "./light-state.type";
+import { LightState } from "../types/light-state.type";
 
 export class Light
 {

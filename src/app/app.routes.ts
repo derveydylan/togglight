@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { HowToComponent } from './how-to/how-to.component';
-import { SettingsComponent } from './settings/settings.component';
-import { CreditsComponent } from './credits/credits.component';
-import { LevelsComponent } from './levels/levels.component';
-import { LevelComponent } from './level/level.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './components/home/home.component';
+import { HowToComponent } from './components/how-to/how-to.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { CreditsComponent } from './components/credits/credits.component';
+import { LevelsComponent } from './components/levels/levels.component';
+import { LevelComponent } from './components/level/level.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 export const routes: Routes =
 [

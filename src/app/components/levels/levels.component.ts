@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { LevelService } from '../services/level.service';
-import { Level } from '../models/level';
+import { LevelService } from '../../services/level.service';
+import { Level } from '../../models/level';
 import { TitleComponent } from '../title/title.component';
 import { RouterLink } from '@angular/router';
 
@@ -17,7 +17,7 @@ import { RouterLink } from '@angular/router';
 export class LevelsComponent implements OnInit
 {
     levels!: Level[]
-    
+
     constructor(private levelService: LevelService){}
 
     countStars(difficulty: number): number[]

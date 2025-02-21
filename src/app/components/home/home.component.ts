@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { DialogComponent } from '../dialog/dialog.component';
-import { Dialog } from '../models/dialog';
-import { DialogService } from '../services/dialog.service';
+import { Dialog } from '../../models/dialog';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
     selector: 'app-home',
@@ -10,7 +10,6 @@ import { DialogService } from '../services/dialog.service';
     imports:
     [
         RouterLink,
-        RouterLinkActive,
         DialogComponent
     ],
     templateUrl: './home.component.html',

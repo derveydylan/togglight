@@ -1,15 +1,15 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { Level } from '../models/level';
+import { Level } from '../../models/level';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { LevelService } from '../services/level.service';
+import { LevelService } from '../../services/level.service';
 import { TitleComponent } from '../title/title.component';
 import { NgClass } from '@angular/common';
-import { LightService } from '../services/light.service';
+import { LightService } from '../../services/light.service';
 
 @Component({
     selector: 'app-level',
     standalone: true,
-    imports: 
+    imports:
     [
         TitleComponent,
         RouterLink,
@@ -31,7 +31,7 @@ export class LevelComponent implements OnInit
                 private route: ActivatedRoute,
                 private router: Router
     ){}
-    
+
     ngOnInit(): void
     {
         this.levelId = +this.route.snapshot.params['id'];
@@ -45,7 +45,7 @@ export class LevelComponent implements OnInit
         {
             this.router.navigateByUrl('/levels')
         }
-    
+
         if(this.level.completed)
             this.router.navigateByUrl('/levels')
     }
@@ -57,7 +57,7 @@ export class LevelComponent implements OnInit
         if(light !== null)
         {
             light.state = this.lightService.reverseLightState(light.state);
-            
+
             const neighoringLights = this.lightService.getNeighoringLights(this.level, light);
 
             if(neighoringLights !== null)
@@ -68,7 +68,7 @@ export class LevelComponent implements OnInit
                 }
             }
         }
-        
+
         this.isPuzzleResolved = this.levelService.isPuzzleCompleted(this.level);
 
         if(this.isPuzzleResolved)

@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Dialog } from "../models/dialog";
-import { DialogType } from "../models/dialog-type.type";
+import { DialogType } from "../types/dialog-type.type";
 
 @Injectable(
 {

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { LevelService } from './services/level.service';
 import { KonamiCodeModule } from 'ngx-konami-code';
 import { DialogService } from './services/dialog.service';
 import { Dialog } from './models/dialog';
-import { DialogComponent } from "./dialog/dialog.component";
+import { DialogComponent } from "./components/dialog/dialog.component";
 
 @Component(
 {
