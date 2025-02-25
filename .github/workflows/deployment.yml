@@ -5,12 +5,14 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout togglight repository
@@ -25,14 +27,26 @@ jobs:
         run: npm install
 
       - name: Build Angular project
-        run: npx ng build --base-href "https://togglight.derveydylan.github.io/" --output-path=../derveydylan.github.io/togglight
+        run: npx ng build --base-href "https://togglight.derveydylan.github.io/" --output-path=dist
+
+      - name: Clone derveydylan.github.io repository
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/derveydylan/derveydylan.github.io.git ../derveydylan.github.io
+          ls -la ../
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy build to derveydylan.github.io
+        run: |
+          rm -rf ../derveydylan.github.io/togglight
+          mkdir -p ../derveydylan.github.io/togglight
+          cp -r dist/* ../derveydylan.github.io/togglight
 
       - name: Add CNAME file
         run: echo "togglight.derveydylan.github.io" > ../derveydylan.github.io/togglight/CNAME
 
       - name: Deploy to derveydylan.github.io
         run: |
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/derveydylan/derveydylan.github.io.git ../derveydylan.github.io
           cd ../derveydylan.github.io
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
