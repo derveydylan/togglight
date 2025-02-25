@@ -9,13 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout togglight repository
         uses: actions/checkout@v4
-
-      - name: Clone derveydylan.github.io repository
-        run: |
-          git clone https://github.com/derveydylan/derveydylan.github.io.git ../derveydylan.github.io
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -33,6 +32,7 @@ jobs:
 
       - name: Deploy to derveydylan.github.io
         run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/derveydylan/derveydylan.github.io.git ../derveydylan.github.io
           cd ../derveydylan.github.io
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
