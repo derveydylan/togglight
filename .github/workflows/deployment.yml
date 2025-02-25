@@ -22,12 +22,10 @@ jobs:
         run: npm install
 
       - name: Build Angular project
-        run: npx ng build --base-href "https://togglight.derveydylan.github.io/" --output-path=dist
+        run: npx ng build --base-href "https://togglight.derveydylan.github.io/" --output-path=../derveydylan.github.io/togglight
 
       - name: Add CNAME file
-        run: |
-          mkdir -p dist/togglight
-          echo "togglight.derveydylan.github.io" > dist/CNAME
+        run: echo "togglight.derveydylan.github.io" > ../derveydylan.github.io/togglight/CNAM
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
